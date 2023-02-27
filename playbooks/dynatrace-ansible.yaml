@@ -3,14 +3,13 @@
     directory with additional OneAgent install parameters. Both linux_other
     and linux_arm have different user specified by platform args parameter.
   include_vars:
-    file: "{{ vault_file }}"
+    file: "/etc/ansible/vault_credentials"
   hosts: AWS
   become: true
   no_log: false
   collections:
     - dynatrace.oneagent
   vars:
-    vault_file: "/etc/ansible/vault_credentials"
     oneagent_version: latest
     oneagent_install_args:
       - INSTALL_PATH=/opt/example
