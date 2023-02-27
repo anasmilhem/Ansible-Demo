@@ -7,10 +7,11 @@
   hosts: AWS
   become: true
   no_log: false
-  roles_path:
-    - ./collections/ansible_collections
+
   collections:
     - dynatrace.oneagent
+  roles:
+    - ./collections/ansible_collections
   vars:
     oneagent_version: latest
     oneagent_install_args:
