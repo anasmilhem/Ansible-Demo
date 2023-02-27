@@ -7,7 +7,7 @@
   no_log: false
   collections:
     - dynatrace.oneagent
-  include_vars:
+  included_vars:
     - /etc/ansible/vault_credentials
   vars:
     oneagent_version: latest
