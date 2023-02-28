@@ -10,8 +10,8 @@
 
   collections:
     - dynatrace.oneagent
-  roles:
-    - ./collections/ansible_collections
+    - name: dyatrace.oneagent
+      source: https://galaxy.ansible.com
   vars:
     oneagent_version: latest
     oneagent_install_args:
