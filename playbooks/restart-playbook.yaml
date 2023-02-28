@@ -1,0 +1,9 @@
+- name: service module demo
+  hosts: AWS
+  become: true
+  tasks:
+    - name: httpd restart
+      ansible.builtin.service:
+        name: httpd
+        state: restarted
+        enabled: true
