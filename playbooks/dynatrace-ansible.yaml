@@ -9,8 +9,7 @@
   no_log: false
 
   collections:
-    - name: dyatrace.oneagent
-      source: "https://galaxy.ansible.com"
+    - dyatrace.oneagent
   vars:
     oneagent_version: latest
     oneagent_install_args:
