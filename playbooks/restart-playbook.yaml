@@ -1,14 +1,14 @@
 - name: service module demo
   hosts: AWS
   become: true
-  set_fact:
-    problem_data: "{{ ansible_local.webhook_payload | from_json }}"
-    serviceName: "{{item.value}}"
-  when: item.key == 'EXENAME'
-  loop: "{{problemData.entityTags}}"
+#   set_fact:
+#     problem_data: "{{ ansible_local.webhook_payload | from_json }}"
+#     serviceName: "{{item.value}}"
+#   when: item.key == 'EXENAME'
+#   loop: "{{problemData.entityTags}}"
   tasks:
     - name: httpd restart
       ansible.builtin.service:
         name: httpd
-        state: restarted
+        state: started
         enabled: true
